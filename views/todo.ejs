@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 5th</title>
+  <link rel="stylesheet" href="/public/css/xyz.css">
+</head>
+
+<body>
+  <%- include('header.ejs') %>
+  <div class="main-dabba">
+  <h1 align="center" >Todo List</h1>
+  <div class="container">
+    <div class="left-pane">
+      <h2>Task List</h2>
+      <ul id="taskList"></ul>
+    </div>
+    <div class="right-pane">
+      <h2>Add New Task</h2>
+      <div>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+          <input type="text" id="task" name="task" placeholder="Enter Task" required>
+          <br>
+          <input type="file" id="image" name="image" accept="image/*" required>
+          <br>
+          <button type="submit">Add Task</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="/public/js/todo.js"></script>
+</body>
+</html>
